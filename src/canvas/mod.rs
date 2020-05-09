@@ -7,7 +7,7 @@ pub mod line;
 pub mod path;
 pub mod point;
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Canvas {
     paths: Vec<Path>,

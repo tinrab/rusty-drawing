@@ -5,5 +5,8 @@ use tokio::prelude::*;
 
 #[tokio::main]
 async fn main() -> RustyResult<()> {
-    Server::run(8080).await
+    env_logger::init();
+
+    let server = Server::new(8080);
+    server.run().await
 }
